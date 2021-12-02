@@ -1,0 +1,11 @@
+<div class="myBody">
+    <div class="booksList" >
+        <div *ngFor="let item of booksList">
+           Title:{{item.title}}, genre: {{item.genre}}, pages: {{item.pages}}, author: {{item.author}}     
+            <hr>
+        </div>
+        <button class="btn" (click)="sortingAZ()">Sorting title A-Z</button>
+        <button class="btn" (click)="sortingAuthor()">Sorting author A-Z</button>
+        <button class="btn" (click)="sortingGenre()">Sorting genre A-Z</button>
+    </div>
+</div>
