@@ -1,0 +1,50 @@
+<div class="myBody">
+    <div class="block">
+        <div *ngFor="let item of bookList" class="displayAuthorDiv" [hidden] = "displayBooks">
+            Title:{{item.title}}, genre: {{item.genre}}, pages: {{item.pages}}, author: {{item.author}} {{item.authorId}}
+            <span (click)="startEditBook( item, authorsField, bookField, genreField, pagesField)" >&#9998;</span>
+            <span (click)="deleteBook(item.id)">&times;</span>
+            <hr>
+        </div>
+        <div>
+            <input (click)="displayDiv()" type="button" class="btn" value="Display/hide books">
+        </div>
+        <div>
+            <div *ngFor="let item of searchBookRes" [hidden]="searchResult">
+                Title:{{item.title}}, genre: {{item.genre}}, pages: {{item.pages}}, author: {{item.author}}
+                <span (click)="startEditBook( item, authorsField, bookField, genreField, pagesField)" >&#9998;</span>
+                <span (click)="deleteBook(item.id)">&times;</span>
+            </div>
+            <div [hidden]="searchAlarm">
+                <p>There is no book with this title</p>
+            </div>
+            <input type="text" #searhBookField id="" placeholder="Enter search title">
+            <button (click)="searchBook(searhBookField.value)"class="btn">Search title</button>
+        </div>
+        <div [hidden]="activationForm">
+            <form novalidate [formGroup]="bookForm" (ngSubmit)="finishEditBook()">
+                <select  #authorsField  formControlName="surname" >
+                     <option *ngFor="let author of authorsList">
+                        {{author.id}} {{author.surname}} 
+                    </option>
+                </select>
+                <input type="text" #bookField formControlName="title" placeholder="White Fang" >
+                <div *ngIf="bookForm.controls.title.invalid && bookForm.controls.title.touched " class="alert">
+                    Required field. Latin letters only. 
+                </div>
+                <select #genreField formControlName = "genre">
+                    <option  *ngFor="let genre of genreList">
+                        {{genre.genre}}
+                    </option>
+                </select>
+                 <input type="text" #pagesField formControlName='pages' placeholder="234">
+                 <div *ngIf="bookForm.controls.pages.invalid && bookForm.controls.pages.touched" class="alert">
+                    Required field. Number only. 
+                </div>
+                <div>
+                    <input type="submit" class="btn"   id="addBook" [disabled]="bookForm.invalid" value="Edit book">
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
