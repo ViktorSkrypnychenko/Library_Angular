@@ -2,16 +2,11 @@
     <div class="block">
         <div class="genre">Enter new genre</div>
         <form novalidate [formGroup]='addGenreForm' (ngSubmit)="addGenre()">
-            
-            <!-- <div> -->
-                <input type="text" #myGenreField formControlName="newGenre" placeholder="genre">
-            <!-- </div> -->
-            <div *ngIf="addGenreForm.controls.newGenre.invalid && addGenreForm.controls.newGenre.touched " class="alert">
+            <input type="text" #myGenreField formControlName="newGenre" placeholder="genre">
+            <div *ngIf="addGenreForm.controls['newGenre'].invalid && addGenreForm.controls['newGenre'].touched " class="alert">
                 Required field. Latin letters only. 
             </div>
-            <!-- <div> -->
-                <input type="submit" class="btn" [disabled]="addGenreForm.invalid" value="Add genre">
-            <!-- </div> -->
+            <input type="submit" class="btn" [disabled]="addGenreForm.invalid" value="Add genre">
         </form>
         <div [hidden]='alarmSearchGenreDiv' class="existsGenre">
             Such a genre exists!
