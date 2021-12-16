@@ -8,10 +8,13 @@
         <div [hidden] = "success">
            Genre successfully edited
         </div>
+        <div [hidden] = "delSuccess">
+          Genre successfully deleted
+       </div>
         <div>
             Enter genre <input type="text" #myGenreField formControlName="newGenre" id='inputAddGenre'>
         </div>
-        <div *ngIf="addGenreForm.controls.newGenre.invalid && addGenreForm.controls.newGenre.touched " class="alert">
+        <div *ngIf="addGenreForm.controls['newGenre'].invalid && addGenreForm.controls['newGenre'].touched" class="alert">
           Required field. Latin letters only. 
         </div>
         <div>
