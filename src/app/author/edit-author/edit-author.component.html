@@ -1,0 +1,46 @@
+<div class="myBody">
+    <div>
+        <div *ngFor="let author of authorList" class="displayAuthorDiv" [hidden] = "displayAuthors">
+            {{ author.surname }} {{author.name}} {{author.middleName}}, birth: {{author.birth}}
+            <span (click)="startEditAuthor(author,surnameField,nameField,birthField,middleNameField)" >&#9998;</span>
+            <span (click)="deleteAuthor(author.id)">&times;</span>
+            <hr>
+        </div>
+        <div>
+            <input (click)="displayDiv()" type="button" class="btn" value="Display/hide authors">
+        </div>
+        <div>
+            <div *ngFor="let item of searchAuthorRes" [hidden]="searchResult">
+                {{item.surname}} {{item.name}} {{item.middleName}}, birth: {{item.birth}}
+                <span (click)="startEditAuthor(item,surnameField,nameField,birthField,middleNameField)" >&#9998;</span>
+                <span (click)="deleteAuthor(item.id)">&times;</span>
+            </div>
+            <div [hidden]="searchAlarm">
+                <p>There is no author with this surname</p>
+            </div>
+            <input type="text" #searhAuthorField id="" placeholder="Enter search author surname">
+            <button (click)="searchAuthor(searhAuthorField.value)"class="btn">Search author</button>
+        </div>
+        <div [hidden]="activationForm">
+            <form novalidate [formGroup]="authorForm" (ngSubmit)="finishEditAuthor()">
+                <input #surnameField  type="text" formControlName = "surname" placeholder=" Surname" id='surname' >
+                <div *ngIf="authorForm.controls['surname'].invalid && authorForm.controls['surname'].touched " class="alert">
+                    Required field. Latin letters only. 
+                </div>
+                <input #nameField type="text" formControlName = "name" placeholder="Name" id='name'>
+                <div *ngIf="authorForm.controls['name'].invalid && authorForm.controls['name'].touched " class="alert">
+                    Required field. Latin letters only. 
+                </div>
+                <input type="text" #middleNameField formControlName="middleName" id="middlename" placeholder=" Middle name">
+                <div *ngIf="authorForm.controls['middleName'].invalid && authorForm.controls['middleName'].dirty " class="alert">
+                  Required field. Latin letters only. 
+                </div>
+                <input #birthField type = "text" formControlName="birth" placeholder="dd-mm-yyyy" id='birth'>
+                <div *ngIf="authorForm.controls['birth'].invalid && authorForm.controls['birth'].touched " class="alert">
+                    Required field. Wrong data format. Needed : dd-mm-yyyy 
+                </div>
+                <input type="submit" class="btn"  value="Edit author" [disabled]="authorForm.invalid">
+             </form>
+        </div>
+    </div>
+</div>
