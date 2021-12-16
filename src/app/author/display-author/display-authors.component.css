@@ -1,0 +1,20 @@
+.myBody{
+    width: 500px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+.btn{
+    width: 150px;
+    height: 25px;
+    border: solid 1px;
+    border-radius: 10px;
+}
+.authorsList{
+    overflow: hidden scroll;
+    height: 60px;
+    background-color: rgba(177, 216, 241, 0.719);
+}
+.displayDiv{
+    margin-top: 10px;
+}
