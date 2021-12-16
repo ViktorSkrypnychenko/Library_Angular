@@ -9,6 +9,7 @@ h1{
 }
 nav{
     background-color: rgb(153, 228, 209);
+    width: 122px;
 }
 .block{
     display: inline-flex;
