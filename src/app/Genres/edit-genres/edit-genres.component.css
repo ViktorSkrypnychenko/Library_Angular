@@ -22,3 +22,8 @@ input{
     width: 200px;
     height: 20px;
 }
+@media(max-width:800px){
+    .myBody{
+        width: 450px;
+    }
+}
