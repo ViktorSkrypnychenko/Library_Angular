@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { LibraryServiceService } from 'src/app/library-service.service';
-import { Book } from 'src/app/genre-book-author';
+import { Book } from 'src/app/types';
 
 @Component({
   selector: 'app-display-books',
   templateUrl: './display-books.component.html',
   styleUrls: ['./display-books.component.css']
 })
-
 export class DisplayBooksComponent implements OnInit {
-   
+
   booksList:Book[]=[];
-  
+
   constructor(private libraryService:LibraryServiceService) { }
 
   ngOnInit(): void {
