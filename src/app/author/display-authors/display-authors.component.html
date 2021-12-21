@@ -1,0 +1,14 @@
+<div class="myBody">
+    <div class="authorsList" >
+        <div *ngFor="let author of authorsList" >
+            {{ author.surname }} {{author.name}} {{author.middleName}}, birth: {{author.birth}}
+           <div>
+                <button (click)="displayBooks(author.id)" class="btn">Display books</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div [hidden]="displayBooksDiv" *ngFor="let item of displayAuthorBooks" class="displayDiv">
+        Title:{{item.title}}, genre: {{item.genre}}, pages: {{item.pages}} author: {{item.author}}
+    </div>
+</div>
