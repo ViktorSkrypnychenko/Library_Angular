@@ -41,3 +41,9 @@ input{
     color: green;
     font-weight: bold;
 }
+
+@media(max-width:800px){
+    .myBody{
+        width: 450px;
+    }
+}
