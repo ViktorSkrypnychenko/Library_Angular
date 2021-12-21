@@ -28,3 +28,8 @@ select{
     width: 210px;
     height: 25px; 
 }
+@media(max-width:800px){
+    .myBody{
+        width: 450px;
+    }
+}
