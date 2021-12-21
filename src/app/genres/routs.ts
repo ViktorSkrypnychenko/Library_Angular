@@ -1,7 +1,7 @@
-import { AddGenreComponent, DisplayGenresComponent, EditGenreComponent } from "./index";
+import { AddGenresComponent, EditGenresComponent, DisplayGenresComponent } from "./index";
 
-export const genreRoute = [
-    {path: "add-genre", component: AddGenreComponent},
-    {path: "display-genres", component: DisplayGenresComponent},
-    {path: "edit-genre", component: EditGenreComponent}
+export const genresRoute = [
+    {path: "add-genres", component: AddGenresComponent},
+    {path: "edit-genres", component: EditGenresComponent},
+    {path: "display-genres", component: DisplayGenresComponent}
 ];
