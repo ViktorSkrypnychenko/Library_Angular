@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LibraryServiceService } from 'src/app/library-service.service';
-import { Genre } from 'src/app/genre-book-author';
+import { Genre } from 'src/app/types';
 
 @Component({
   selector: 'app-display-genres',
   templateUrl: './display-genres.component.html',
   styleUrls: ['./display-genres.component.css']
 })
-
 export class DisplayGenresComponent implements OnInit {
-  
+
   genreList: Genre[] = [];
 
   constructor(private libraryService:LibraryServiceService) { }
