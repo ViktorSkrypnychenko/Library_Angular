@@ -36,6 +36,9 @@ nav{
 a:hover{
     box-shadow: 0 6px 6px rgba(10,16,20,.15), 0 0 52px rgba(10,16,20,.12);
 }
+.linkBtn{
+    margin: 10px 0;
+}
 @media(max-width:800px){
     #myBody{
         width: 450px;
@@ -43,7 +46,15 @@ a:hover{
     .block{
         display: block;
     }
-    .myForm2{
-        margin-left: 26px;
+    nav{
+        display: flex;
+        background-color: rgba(209, 234, 236, 0.507);
+        margin: 15px 0px;
+    }
+    .linkBtn{
+        margin:0 10px;
+    }
+    .title{
+        display: none;
     }
 }
