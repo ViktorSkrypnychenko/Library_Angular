@@ -17,6 +17,7 @@ import { BackendServiceService } from './backend-service.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Page404Component } from './page404/page404.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CommonModule } from '@angular/common';
     DisplayBooksComponent,
     AddGenresComponent,
     EditGenresComponent,
-    DisplayGenresComponent
+    DisplayGenresComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
