@@ -1,7 +1,7 @@
-import { AddBookComponent, DisplayBooksComponent,EditBookComponent } from "./index";
+import { AddBooksComponent, EditBooksComponent, DisplayBooksComponent } from "./index";
 
 export const booksRoute = [
-    {path: "add-book", component: AddBookComponent},
-    {path: "display-books", component: DisplayBooksComponent},
-    {path: "edit-book", component: EditBookComponent}
+    {path: "add-books", component: AddBooksComponent },
+    {path: "edit-books", component: EditBooksComponent},
+    {path: "display-books", component: DisplayBooksComponent }
 ];
