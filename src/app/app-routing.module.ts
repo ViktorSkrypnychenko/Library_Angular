@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { booksRoute } from './books/routs';
-import { genreRoute } from './genres/routs';
-import { authorRoute } from './authors/routs';
-
+import { authorsRoute } from './Authors/routs';
+import { booksRoute } from './Books/routs';
+import { genresRoute } from './Genres/routs';
 
 const routes: Routes = [
+  ...authorsRoute,
   ...booksRoute,
-  ...genreRoute,
-  ...authorRoute
+  ...genresRoute
 ];
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

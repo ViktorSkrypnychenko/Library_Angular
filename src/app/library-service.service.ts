@@ -1,20 +1,21 @@
-import { Injectable } from "@angular/core";
-import { HttpClient,HttpHeaders } from "@angular/common/http";
-import { Genre,Author,Book } from "./genre-book-author";
-import { Observable, of } from "rxjs";
-import { catchError } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Author, Book, Genre } from './types';
+import { Observable,of } from 'rxjs';
+import { catchError } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
+export class LibraryServiceService {
 
-export class LibraryServiceService{
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({'Contenet-Type':'application/json'})
   };
 
-  constructor(private http: HttpClient) { }
-// Author
+  constructor(private http:HttpClient) { }
+
+  // Author
   getAuthor(){
     return this.http.get<Author[]>('api/authors').pipe(catchError(this.handleError<Author[]>('getAuthor', [])))
   } 
@@ -72,12 +73,4 @@ export class LibraryServiceService{
        return of(result as T);
     };
   }  
-
 }
-
-
-
-
-
-
-

@@ -23,7 +23,6 @@ nav{
     height: 22px;
     border: solid 1px;
     display: inline-block;
-    /* margin-top: 22px; */
     padding-top: 7px;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.623);
@@ -37,7 +36,6 @@ nav{
 a:hover{
     box-shadow: 0 6px 6px rgba(10,16,20,.15), 0 0 52px rgba(10,16,20,.12);
 }
-
 @media(max-width:800px){
     #myBody{
         width: 450px;
@@ -47,9 +45,5 @@ a:hover{
     }
     .myForm2{
         margin-left: 26px;
-               
     }
-    
 }
-   
-

@@ -1,38 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { AddAuthorsComponent } from './Authors/add-authors/add-authors.component';
+import { EditAuthorsComponent } from './Authors/edit-authors/edit-authors.component';
+import { DisplayAuthorsComponent } from './Authors/display-authors/display-authors.component';
+import { AddBooksComponent } from './Books/add-books/add-books.component';
+import { EditBooksComponent } from './Books/edit-books/edit-books.component';
+import { DisplayBooksComponent } from './Books/display-books/display-books.component';
+import { AddGenresComponent } from './Genres/add-genres/add-genres.component';
+import { EditGenresComponent } from './Genres/edit-genres/edit-genres.component';
+import { DisplayGenresComponent } from './Genres/display-genres/display-genres.component';
 import { BackendServiceService } from './backend-service.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AddBookComponent } from './books/add-book/add-book.component';
-import { EditBookComponent } from './books/edit-book/edit-book.component';
-import { DisplayBooksComponent } from './books/display-books/display-books.component';
-import { AddGenreComponent } from './genres/add-genre/add-genre.component';
-import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
-import { DisplayGenresComponent } from './genres/display-genres/display-genres.component';
-import { AddAuthorComponent } from './authors/add-author/add-author.component';
-import { EditAuthorComponent } from './authors/edit-author/edit-author.component';
-import { DisplayAuthorsComponent } from './authors/display-authors/display-authors.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    AddBookComponent,
-    EditBookComponent,
-    DisplayBooksComponent,
-   
-    AddGenreComponent,
-    EditGenreComponent,
-    DisplayGenresComponent,
-    
-    AddAuthorComponent,
-    EditAuthorComponent,
+    AddAuthorsComponent,
+    EditAuthorsComponent,
     DisplayAuthorsComponent,
+    AddBooksComponent,
+    EditBooksComponent,
+    DisplayBooksComponent,
+    AddGenresComponent,
+    EditGenresComponent,
+    DisplayGenresComponent
   ],
   imports: [
     BrowserModule,
