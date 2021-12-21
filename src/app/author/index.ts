@@ -1,3 +1,3 @@
-export * from "./add-author/add-author.component";
+export * from "./add-authors/add-authors.component";
 export * from "./display-authors/display-authors.component";
-export * from "./edit-author/edit-author.component";
+export * from "./edit-authors/edit-authors.component";

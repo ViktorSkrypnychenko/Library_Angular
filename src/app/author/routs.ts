@@ -1,7 +1,7 @@
-import { AddAuthorComponent, DisplayAuthorsComponent,EditAuthorComponent } from "./index";
+import { AddAuthorsComponent,EditAuthorsComponent,DisplayAuthorsComponent } from "./index";
 
-export const authorRoute = [
-    {path: "add-author", component: AddAuthorComponent},
-    {path: "display-authors", component: DisplayAuthorsComponent},
-    {path: "edit-author", component: EditAuthorComponent}
+export const authorsRoute = [
+    {path: "add-authors", component: AddAuthorsComponent},
+    {path: "edit-authors", component: EditAuthorsComponent},
+    {path: "display-authors", component:DisplayAuthorsComponent}
 ];
